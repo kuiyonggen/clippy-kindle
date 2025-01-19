@@ -40,8 +40,8 @@ def main():
     #if os.path.exists(outPathJson):
     #    if not answerYesNo("Overwrite '{}' (y/n)? ".format(outPathJson)):
     #        outPathJson = getAvailableFname(outPath + "collection", ".json")
-    with open(outPathJson, 'w') as f:
-        json.dump(outData, f, indent=2) # write indented json to file
+    with open(outPathJson, 'w', encoding="utf-8") as f:
+        json.dump(outData, f, indent=2, ensure_ascii=False) # write indented json to file
         print("Wrote all parsed data to: '{}'\n".format(outPathJson))
 
 if __name__ == "__main__":

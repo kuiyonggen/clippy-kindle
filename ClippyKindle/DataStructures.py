@@ -173,7 +173,7 @@ class Book:
             """
             i = 0
             while True:
-                if i >= len(objList)-2: # stop when i is at the second to last element
+                if i >= len(objList)-1: # stop when i is at the second to last element
                     break
                 # compare to bookmark i+1:
                 if objList[i].isDuplicate(objList[i+1]):
